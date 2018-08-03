@@ -12,6 +12,9 @@ body{
 li{
    list-style: none;
 }
+a{
+    color: inherit;
+}
 /////////////////////////Navbar/////////////////////////////
 .app-navbar{
    content: '';
@@ -26,16 +29,27 @@ li{
 .navbar-logo{
    display: inline-block;
    img{
-      height: 50px;
-      margin-top: 10px;
+    height: 50px;
    }
 }
 .navbar-menu{
    display: inline-block;
+   font-size: 1.2em;
+   
    li{
-      display: inline-block;
-      margin: -30px 20px 20px 20px
+    display: inline-block;
+    margin: 20px 20px 20px 20px
    }
+}
+.navbar-menu > li > a{
+    padding: 0 3px 21px 3px;
+    border-bottom: 5px solid $transparent;
+    transition: ease all .4s;
+}
+.navbar-menu > li > a:hover{
+    text-decoration: none;
+    color: $main-colour;
+    border-bottom: 5px solid $main-colour;
 }
 
 
@@ -43,7 +57,7 @@ li{
 .home-page{
    height: 100vh;
    width: 100%;
-   background-image: url(./assets/background.png);
+   background-image: linear-gradient(90deg, $main-colour, $transparent, $transparent),  url(./assets/background.png);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
