@@ -1,16 +1,40 @@
 @import "~bootstrap-scss/bootstrap.scss";
-@import "./styles/colours";
+@import "./styles/mixins";
 
+@font-face {
+    font-family: SourceSansProRegular;
+    src: url('./assets/fonts/SourceSansPro-Regular.ttf');
+}
+@font-face{
+    font-family: SourceSansProLight;
+    src: url('./assets/fonts/SourceSansPro-Light.ttf');
+}
 
 html,
 body{
    padding: 0;
    margin: 0;
    color: $text-colour;
+   font-family: 'SourceSansProRegular';
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   text-rendering: optimizeLegibility;
+   overflow-x: hidden;
 }
 
 li{
    list-style: none;
+}
+a{
+    color: inherit;
+}
+section h1{
+    font-family: 'SourceSansProLight';
+    text-align: center;
+    display: block;
+    padding: 30px 0;
+    width: 100%;
+    border-bottom: 1px solid $borders-lighter;
 }
 /////////////////////////Navbar/////////////////////////////
 .app-navbar{
@@ -18,24 +42,36 @@ li{
    width: 100%;
    height: 70px;
    border-bottom: 1px solid $borders;
-   position: absolute;
+   position: fixed;
    background: $white;
    top: 0;
+   opacity: 0.93;
 }
 
 .navbar-logo{
    display: inline-block;
    img{
-      height: 50px;
-      margin-top: 10px;
+    height: 50px;
    }
 }
 .navbar-menu{
    display: inline-block;
+   font-size: 1.2em;
+   
    li{
-      display: inline-block;
-      margin: -30px 20px 20px 20px
+    display: inline-block;
+    margin: 20px 20px 20px 20px
    }
+}
+.navbar-menu > li > a{
+    padding: 0 3px 19px 3px;
+    border-bottom: 5px solid $transparent;
+    transition: ease all .4s;
+}
+.navbar-menu > li > a:hover{
+    text-decoration: none;
+    color: $main-colour;
+    border-bottom: 5px solid $main-colour;
 }
 
 
@@ -43,10 +79,34 @@ li{
 .home-page{
    height: 100vh;
    width: 100%;
-   background-image: url(./assets/background.png);
+   background-image: linear-gradient(90deg, $main-colour, $transparent),  url(./assets/background.png);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
+   background-attachment: fixed;
+}
+.slogan-cover{
+    height: calc(100% - 200px);
+    width: 40%;
+   
+    img{
+        margin-top: 200px;
+        margin-left: 50px;
+        height: inherit;
+    }
+}
 
-   content: '';
+/////////////////////Store Section ////////////////////////////////
+.store{
+    height: 100vh;
+    width: 100%;
+    content: '';
+    background: $light-background;
+}
+.store > .container{
+    padding-top: 60px;
+}
+.phone-card{
+    @include containerTemplate;
+    height: 300px;
 }

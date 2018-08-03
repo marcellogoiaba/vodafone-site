@@ -4,15 +4,24 @@
       <img src="../../assets/monochrome-red.svg" alt="">
     </div>
     <ul class="navbar-menu">
-      <li>Home</li>
-      <li>Shop</li>
-      <li>Contact</li>
+      <li><a href="#home" class="js--scroll-to-home">Home</a></li>
+      <li><a href="#store" class="js--scroll-to-store">Store</a></li>
+      <li><a href="#contact" class="js--scroll-to-contact">Contact</a></li>
     </ul>
   </div>
 </div>
 <section class="home-page">
-  
+  <div class="slogan-cover">
+    <img src="../../assets/v-cover.svg" alt="">
+  </div>
 </section>
 <section class="store">
-  
+  <h1>Online Store</h1>
+  <div class="container">
+    <ul>
+      <li *ngFor="let device of devices$">
+        {{ device.description }} something
+      </li>
+    </ul>
+  </div>
 </section>
