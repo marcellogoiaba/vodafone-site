@@ -18,10 +18,25 @@
 <section class="store">
   <h1>Online Store</h1>
   <div class="container">
-    <ul>
-      <li *ngFor="let device of devices$">
-        {{ device.description }} something
-      </li>
-    </ul>
+    <div class="row" >
+      <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let device of devices$">
+        <div class="phone-card">
+          <div class="device-img">
+            <img src="{{device.imageFront}}" alt="">
+          </div>
+          <div class="device-name">
+              {{ device.description }}
+          </div>
+          <div class="device-price">
+            <!-- if price is not 0, render the price, else render the template (free) -->
+            <span>from </span><h4 *ngIf="device.priceFrom !== 0; else itsFree">{{ device.priceFrom }}</h4>
+          </div>
+          <ng-template #itsFree>
+            <h4>Free</h4>
+          </ng-template>
+        </div>
+          
+      </div>
+    </div>
   </div>
 </section>
