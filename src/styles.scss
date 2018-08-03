@@ -109,16 +109,19 @@ section h1{
 }
 .phone-card{
     @include containerTemplate;
-    height: 400px;
+    height: 388px;
     width: inherit;
     display: inline-block;
-    margin: 10px;
+    margin: 20px 10px 0 0;
     z-index: 0;
     text-align: center;
 }
 .phone-card:hover{
     cursor: pointer;
     @include addShadow;
+    .details{
+        display: block;
+    }
 }
 .device-img{
     height: 240px;
@@ -131,7 +134,36 @@ section h1{
 }
 .device-price{
     color: $main-colour;
+    transition: ease all .3s;
     h4{
         display: inline-block;
+    }
+}
+.details{
+    margin-top: 3px;
+    padding: 4px 10px;
+    background: $main-colour;
+    color: $white;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+
+@media only screen and (max-width: 420px){
+    .navbar-logo{
+        float: left;
+        padding-top: 10px !important;
+    }
+    .navbar-menu{
+        li{
+            margin: 20px 20px 20px 6px !important;
+        }
+    }
+}
+@media only screen and (max-width: 390px){
+    .navbar-menu li{
+        margin: 20px 16px 20px 6px !important;
     }
 }

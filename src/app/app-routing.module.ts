@@ -5,7 +5,7 @@ import { PhoneInfoComponent } from './phone-info/phone-info.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
-  { path: 'details/:id', component: PhoneInfoComponent}
+  { path: 'details/:productid', component: PhoneInfoComponent}
 ];
 
 @NgModule({
