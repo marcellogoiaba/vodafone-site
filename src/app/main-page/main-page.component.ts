@@ -27,5 +27,10 @@ export class MainPageComponent implements OnInit {
   scrollToStore(){
     $('html, body').animate({scrollTop: $('.store-section').offset().top}, 1000);
   }
+
+  //expand filter container
+  expandFilters(){
+    $('.filters').slideToggle();
+  }
   
 }

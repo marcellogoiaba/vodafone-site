@@ -102,10 +102,41 @@ section h1{
     height: auto;
     width: 100%;
     content: '';
+    padding-bottom: 60px;
     background: $light-background;
 }
-.store > .container{
-    padding-top: 70px;
+
+.filters-div{
+    display: block;
+    width: 100%;
+}
+.filter-button{
+    border: 1px solid $borders;
+    border-top: none;
+    width: 183px;
+    padding: 0 4px 4px 10px;
+    border-radius: 0 0 7px 7px ;
+    transition: ease all .4s;
+}
+.filter-button:hover{
+    border: 1px solid $main-colour;
+    border-top: none;
+    cursor: pointer;
+    // color: $main-colour;
+}
+.filters{
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid $borders-lighter;
+    padding: 14px 0;
+    display: none;
+    label{
+        margin-bottom: -1px;
+    }
+;}
+
+.app-catalog{
+    padding-top: 14px;
 }
 .phone-card{
     @include containerTemplate;
@@ -187,6 +218,9 @@ section h1{
 @media only screen and (max-height: 720px )  and (orientation: landscape) {
     .slogan-cover{
         width: auto;
-        height: calc(100% - 140px);
+        height: calc(100% - 90px);
+        img{
+            margin-top: 120px;
+        }
     }
 }
