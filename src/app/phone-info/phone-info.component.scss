@@ -1,10 +1,20 @@
 
 @import "../../styles/colours";
 
+.clearfix{zoom: 1}
+.clearfix:after{
+    content: ' ';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 section .phone-detail{
     height: 100vh !important;
 }
-.container h1{
+
+section h1{
     text-align: center;
 
 }
@@ -22,14 +32,16 @@ section .phone-detail{
 }
 .device-photo{
     height: calc(100vh - 300px);
+    text-align: center;
     img{
         height: inherit;
     }
 }
 .photo-gallery{
-    height: 70px;
+    height: 60px;
     width: inherit;
-    
+    margin-bottom: 14px;
+    text-align: center;
     img{
         display: inline-block;
         height: inherit;
@@ -39,3 +51,51 @@ section .phone-detail{
         border-radius: 7px;
     }
 }
+.device-info{
+    border-left: 1px solid $borders;
+    padding: 30px;
+    li{
+        list-style: circle;
+    }
+    p{
+        padding: 20px;
+    }
+}
+.buy-now {
+    margin: 30px 0 0 20px;
+    padding: 6px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: $main-colour;
+    border: none;
+    border-radius: 7px;
+    transition: ease all .4s;
+  }
+  
+  .buy-now:hover {background: linear-gradient($main-colour, $main-colour-darker)}
+  
+  .buy-now:active {
+      transition: ease all .4s;
+    background: $main-colour-darker;
+    // transform: translateY(1px);
+  }
+
+  /////////////////////Media queries/////////////////////
+  @media only screen and ( max-width: 767px ){
+    .device-info{
+        border-left: none;
+        border-top: 1px solid $borders;
+        padding: 5px;
+        margin-bottom: 30px;
+    }
+    .photo-gallery{
+        margin-bottom: 34px;
+    }
+  }
+  @media only screen and ( max-width: 340px ){
+    section h1{ font-size: 1.6em}
+  }
+  
