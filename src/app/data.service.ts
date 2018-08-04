@@ -12,8 +12,8 @@ export class DataService {
     return this.http.get('./src/data/feed.json')
   }
 
-  getDevice(productid) {
-    return this.http.get('./src/data/feed.json'+productid)
+  getDevice(userId) {
+    return this.http.get('./src/data/feed.json/'+userId)
   }
 
 }

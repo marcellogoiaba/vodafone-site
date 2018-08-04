@@ -13,7 +13,7 @@ export class PhoneInfoComponent implements OnInit {
   device$: Object;
 
   constructor( private data: DataService, private route: ActivatedRoute) { 
-    this.route.params.subscribe( params => this.device$ = params.productid)
+    this.route.params.subscribe( params => this.device$ = params.id)
   }
 
   ngOnInit() {

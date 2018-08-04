@@ -1,6 +1,6 @@
 [
         {
-        "productid": "898056",
+        "id": "898056",
         "ttproductid": "P08109413",
         "handsetcode": "VSF7B",
         "offercode": "1597024",
@@ -62,7 +62,7 @@
         "priceFrom": 49.99
     },
     {
-        "productid": "918085",
+        "id": "918085",
         "ttproductid": "P01749513",
         "handsetcode": "7P2RG",
         "offercode": "1627053",
@@ -130,7 +130,7 @@
         "priceFrom": 299.99
     },
     {
-        "productid": "797050",
+        "id": "797050",
         "ttproductid": "P01796113",
         "handsetcode": "I6S16",
         "offercode": "1483031",
@@ -192,7 +192,7 @@
         "priceFrom": 199.99
     },
     {
-        "productid": "892062",
+        "id": "892062",
         "ttproductid": "P01700813",
         "handsetcode": "ASERD",
         "offercode": "1592031",
@@ -260,7 +260,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "922056",
+        "id": "922056",
         "ttproductid": "P01351413",
         "handsetcode": "SE5BL",
         "offercode": "1631024",
@@ -325,7 +325,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "869066",
+        "id": "869066",
         "ttproductid": "P01766513",
         "handsetcode": "A6P4S",
         "offercode": "1569030",
@@ -390,7 +390,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "897057",
+        "id": "897057",
         "ttproductid": "P03404213",
         "handsetcode": "SA3GD",
         "offercode": "1596027",
@@ -456,7 +456,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "896058",
+        "id": "896058",
         "ttproductid": "P08109813",
         "handsetcode": "VPR7W",
         "offercode": "1596025",
@@ -521,7 +521,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "902057",
+        "id": "902057",
         "ttproductid": "P03409613",
         "handsetcode": "GS7ES",
         "offercode": "1603027",
@@ -588,7 +588,7 @@
         "priceFrom": 199.99
     },
     {
-        "productid": "737052",
+        "id": "737052",
         "ttproductid": "P01774913",
         "handsetcode": "5S16S",
         "offercode": "1417019",
@@ -654,7 +654,7 @@
         "priceFrom": 49.99
     },
     {
-        "productid": "902056",
+        "id": "902056",
         "ttproductid": "P03409513",
         "handsetcode": "GS7SR",
         "offercode": "1603026",
@@ -722,7 +722,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "855050",
+        "id": "855050",
         "ttproductid": "P03464113",
         "handsetcode": "SE32B",
         "offercode": "1553013",
@@ -790,7 +790,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "896056",
+        "id": "896056",
         "ttproductid": "P04416213",
         "handsetcode": "HD53G",
         "offercode": "1599025",
@@ -855,7 +855,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "899056",
+        "id": "899056",
         "ttproductid": "P09919213",
         "handsetcode": "HUP9T",
         "offercode": "1599024",
@@ -916,7 +916,7 @@
         "priceFrom": 149.99
     },
     {
-        "productid": "918075",
+        "id": "918075",
         "ttproductid": "P01748613",
         "handsetcode": "7P3RG",
         "offercode": "1627043",
@@ -983,7 +983,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "906057",
+        "id": "906057",
         "ttproductid": "P04510413",
         "handsetcode": "VSU7S",
         "offercode": "1611025",
@@ -1048,7 +1048,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "918077",
+        "id": "918077",
         "ttproductid": "P01748713",
         "handsetcode": "7P12B",
         "offercode": "1627045",
@@ -1116,7 +1116,7 @@
         "priceFrom": 199.99
     },
     {
-        "productid": "893057",
+        "id": "893057",
         "ttproductid": "P02393613",
         "handsetcode": "NL650",
         "offercode": "1594025",
@@ -1177,7 +1177,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "892058",
+        "id": "892058",
         "ttproductid": "P01700413",
         "handsetcode": "ASERG",
         "offercode": "1592027",
@@ -1245,7 +1245,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "894056",
+        "id": "894056",
         "ttproductid": "P04509013",
         "handsetcode": "A2045",
         "offercode": "1594027",
@@ -1306,7 +1306,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "920056",
+        "id": "920056",
         "ttproductid": "P09920713",
         "handsetcode": "HY5II",
         "offercode": "1629024",
@@ -1367,7 +1367,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "911056",
+        "id": "911056",
         "ttproductid": "P01347013",
         "handsetcode": "SXPAX",
         "offercode": "1618024",
@@ -1428,7 +1428,7 @@
         "priceFrom": 49.99
     },
     {
-        "productid": "869072",
+        "id": "869072",
         "ttproductid": "P01767813",
         "handsetcode": "A6P8R",
         "offercode": "1572019",
@@ -1495,7 +1495,7 @@
         "priceFrom": 199.99
     },
     {
-        "productid": "869060",
+        "id": "869060",
         "ttproductid": "P01767313",
         "handsetcode": "A6S8R",
         "offercode": "1572015",
@@ -1563,7 +1563,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "907056",
+        "id": "907056",
         "ttproductid": "P04511213",
         "handsetcode": "VSP7B",
         "offercode": "1614024",
@@ -1624,7 +1624,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "918062",
+        "id": "918062",
         "ttproductid": "P01744613",
         "handsetcode": "I712B",
         "offercode": "1627030",
@@ -1692,7 +1692,7 @@
         "priceFrom": 99.99
     },
     {
-        "productid": "903057",
+        "id": "903057",
         "ttproductid": "P04510213",
         "handsetcode": "VSM7W",
         "offercode": "1606025",
@@ -1757,7 +1757,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "918066",
+        "id": "918066",
         "ttproductid": "P01748013",
         "handsetcode": "I72JB",
         "offercode": "1627034",
@@ -1825,7 +1825,7 @@
         "priceFrom": 199.99
     },
     {
-        "productid": "926059",
+        "id": "926059",
         "ttproductid": "P01750613",
         "handsetcode": "6S32B",
         "offercode": "1638024",
@@ -1887,7 +1887,7 @@
         "priceFrom": 249.99
     },
     {
-        "productid": "927056",
+        "id": "927056",
         "ttproductid": "P07619513",
         "handsetcode": "D6520",
         "offercode": "1637024",
@@ -1948,7 +1948,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "849050",
+        "id": "849050",
         "ttproductid": "P03409813",
         "handsetcode": "SX3VE",
         "offercode": "1635024",
@@ -2010,7 +2010,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "919056",
+        "id": "919056",
         "ttproductid": "P04510513",
         "handsetcode": "VSMT7",
         "offercode": "1628024",
@@ -2071,7 +2071,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "918057",
+        "id": "918057",
         "ttproductid": "P01743013",
         "handsetcode": "I732B",
         "offercode": "1627025",
@@ -2138,7 +2138,7 @@
         "priceFrom": 199.99
     },
     {
-        "productid": "797064",
+        "id": "797064",
         "ttproductid": "P01797813",
         "handsetcode": "6PG28",
         "offercode": "1483045",
@@ -2200,7 +2200,7 @@
         "priceFrom": 329.99
     },
     {
-        "productid": "859050",
+        "id": "859050",
         "ttproductid": "P03464413",
         "handsetcode": "S632T",
         "offercode": "1558013",
@@ -2268,7 +2268,7 @@
         "priceFrom": 179.99
     },
     {
-        "productid": "900057",
+        "id": "900057",
         "ttproductid": "P03402213",
         "handsetcode": "SJ3BL",
         "offercode": "1600026",
@@ -2334,7 +2334,7 @@
         "priceFrom": 0.0
     },
     {
-        "productid": "904056",
+        "id": "904056",
         "ttproductid": "P09919413",
         "handsetcode": "HUP9L",
         "offercode": "1609024",
@@ -2395,7 +2395,7 @@
         "priceFrom": 199.99
     },
     {
-        "productid": "912056",
+        "id": "912056",
         "ttproductid": "P01346913",
         "handsetcode": "SXPXA",
         "offercode": "1620024",

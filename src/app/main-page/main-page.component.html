@@ -21,7 +21,7 @@
     <div class="row" >
       <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let device of devices$ ">
         <!-- click on the  phone-card div, routes you to phone-info view  -->
-        <div class="phone-card" routerLink="/details/{{device.productid}}"> 
+        <div class="phone-card" routerLink="/details/{{device.id}}"> 
           <div class="device-img">
             <img src="{{device.imageFront}}" alt="">
           </div>

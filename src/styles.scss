@@ -87,7 +87,7 @@ section h1{
    background-attachment: fixed;
 }
 .slogan-cover{
-    height: calc(100% - 200px);
+    height: calc(100% - 180px);
     width: 40%;
    
     img{
@@ -150,6 +150,12 @@ section h1{
     display: none;
 }
 
+/////////////////Media Queries /////////////////////////
+@media only screen and (max-width: 490px ){
+    .slogan-cover{
+        margin-left: -40px;
+    }
+}
 
 @media only screen and (max-width: 420px){
     .navbar-logo{
@@ -162,8 +168,24 @@ section h1{
         }
     }
 }
+
 @media only screen and (max-width: 390px){
     .navbar-menu li{
         margin: 20px 16px 20px 6px !important;
+    }
+}
+@media only screen and (max-width: 358px){
+    .navbar-menu {
+        padding-left: 10px;
+        li{
+            margin-right: 11px !important;
+        }
+    }
+}
+
+@media only screen and (max-height: 720px )  and (orientation: landscape) {
+    .slogan-cover{
+        width: auto;
+        height: calc(100% - 140px);
     }
 }
