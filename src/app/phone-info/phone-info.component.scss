@@ -1,0 +1,41 @@
+
+@import "../../styles/colours";
+
+section .phone-detail{
+    height: 100vh !important;
+}
+.container h1{
+    text-align: center;
+
+}
+.back-button{
+    display: block;
+    margin: 20px 0;
+    font-size: 1.5em;
+    a{
+        color: $text-colour;
+        text-decoration: none;
+    }
+    img{
+        margin-top: -3px;
+    }
+}
+.device-photo{
+    height: calc(100vh - 300px);
+    img{
+        height: inherit;
+    }
+}
+.photo-gallery{
+    height: 70px;
+    width: inherit;
+    
+    img{
+        display: inline-block;
+        height: inherit;
+        border: 1px solid $borders;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 7px;
+    }
+}
