@@ -26,25 +26,19 @@
       <div class="filters">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <label for="">Sort by price</label>
-              <select class="form-control" name="filterbyprice" id="">
-                <option value="">Low to high</option>
-                <option value="">High to low</option>
+              <select class="form-control" name="filterbyprice" id="filterbyprice" >
+                <option [ngValue]="lowToHigh">Low to high</option>
+                <option [ngValue]="highToLow">High to low</option>
               </select>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <label for="">Select manufacturer</label>
-              <select class="form-control" name="filterbyprice" id="">
-                <option value="">Low to high</option>
-                <option value="">High to low</option>
-              </select>
-            </div>
-            <div class="col-sm-4">
-              <label for="">Select OS</label>
-              <select class="form-control" name="filterbyprice" id="">
-                <option value="">Low to high</option>
-                <option value="">High to low</option>
+              <!-- [(ngModel)]="filter.byManufacturer" (change)="onManufacturerSelect(filter.byManufacturer) -->
+              <select class="form-control" name="filterbymanufacturer" id="filterbymanufacturer" [(ngModel)]="manufacturer" >
+                <option selected value="">Show all devices</option>
+                <option *ngFor="let x of devices$" [ngValue]="x.manufacturer" >{{x.manufacturer}}</option>
               </select>
             </div>
           </div>
@@ -53,7 +47,7 @@
     </div>
   <div class="container">
     <div class="row app-catalog" >
-      <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let device of devices$ ">
+      <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let device of devices$ | byManufacturer:manufacturer">
         <!-- click on the  phone-card div, routes you to phone-info view  -->
         <div class="phone-card" routerLink="/details/{{device.id}}"> 
           <div class="device-img">

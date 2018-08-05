@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PhoneInfoComponent } from './phone-info/phone-info.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ByManufacturerPipe } from './filters/by-manufacturer.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    PhoneInfoComponent
+    PhoneInfoComponent,
+    ByManufacturerPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
