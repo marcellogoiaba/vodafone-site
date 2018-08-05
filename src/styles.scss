@@ -181,6 +181,41 @@ section h1{
     display: none;
 }
 
+//////////////////Contact Section/////////////////////////
+
+.contacts-section{
+    background: $text-colour;
+    color: $white;
+    padding: 80px 30px 40px 30px;
+    h6, h5{
+        font-family: 'SourceSansProLight';
+        margin-bottom: 20px;
+    }
+    h6 { font-size: 2.2em}
+    h5 { font-size: 1.8em }
+    .row{
+        padding-top: 40px;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}
+.follow-us{
+    width: 100%;
+    text-align: center;
+    img{
+        height: 50px;
+        margin: 5px;
+    }
+}
+.footer{
+    text-align: center;
+    font-feature-settings: 'SourceSansProLight';
+    font-size: .7em;
+    width: 100%;
+    padding-top: 20px;
+}
+
 
 /////////////////Media Queries /////////////////////////
 @media only screen and (max-width: 490px ){
