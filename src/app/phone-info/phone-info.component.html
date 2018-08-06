@@ -1,5 +1,5 @@
 <section class="phone-detail">
-  <h1>iPhone 7 Plus 64 Gb</h1>
+  <h1>{{device$.description}}</h1>
   
   <div class="container">
       <div class="back-button">
@@ -8,26 +8,23 @@
       <div class="row">
         <div class="col-md-5">
           <div class="device-photo">
-              <img src="https://www.vodafone.ie/image/7P2RG_FRONT.img" alt="">
+              <img src="{{device$.imageFront}}" alt="">
           </div>
           <div class="photo-gallery clearfix">
-            <img src="https://www.vodafone.ie/image/7P2RG_FRONT.img" alt="">
-            <img src="https://www.vodafone.ie/image/7P2RG_BACK.img" alt="">
-            <img src="https://www.vodafone.ie/image/7P2RG_DETAILS.img" alt="">
+            <img *ngIf="device$.imageFront" src="{{device$.imageFront}}" alt="">
+            <img *ngIf="device$.imageBack" src="{{device$.imageBack}}" alt="">
+            <img *ngIf="device$.imageDetails" src="{{device$.imageDetails}}" alt="">
           </div>
         </div>
         <div class="col-md-7 device-info">
             <p>
-              Product description text goes here. Amend how you want. Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit. Nunc accumsan aliquet purus at pellentesque. Vivamus congue tortor vel metus imperdiet, 
-              at fermentum quam vehicula. Quisque ac nunc dolor. Proin non scelerisque nulla. Nam fermentum ex ac erat vehicula porttitor. 
-              Nulla id purus massa.
+              {{device$.productDescription}}
             </p>
             <ul>
-              <li><strong>Manufacturer: </strong> Apple</li>
+              <li><strong>Manufacturer: </strong> {{device$.manufacturer}}</li>
               <li><strong>Operating System: </strong> IOS</li>
-              <li><strong>Display Size: </strong> 5.5in </li>
-              <li><strong>Colours: </strong> Rose Gold, Space Grey </li>
+              <li><strong>Display Size: </strong> 5.5" </li>
+              <!-- <li *ngFor="let x of device$ "><strong>Colours: <span></span></strong> Rose Gold, Space Grey </li> -->
             </ul>
             <button class=" btn buy-now">
               Buy now

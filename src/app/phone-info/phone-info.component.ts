@@ -10,17 +10,24 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PhoneInfoComponent implements OnInit {
 
-  device$: Object;
+  deviceID$ : Object;
+  device$: any = [];
+  devices$: any = [];
 
   constructor( private data: DataService, private route: ActivatedRoute) { 
-    this.route.params.subscribe( params => this.device$ = params.id)
+    this.route.params.subscribe( (params) => { this.deviceID$ = params.id });
   }
 
   ngOnInit() {
-    this.data.getDevice(this.device$).subscribe(
-      data => this.device$ = data
-    );
-    console.log("device", this.data)
+    // this.data.getDevice(this.device$).subscribe(
+    //   data => this.device$ = data
+    // );
+    // console.log("device", this.data)
+    this.data.getDevices().subscribe((response) => {
+      this.devices$ = response;
+      this.device$ = this.devices$.find( x => x.id === this.deviceID$);
+
+    })
   }
 
 }

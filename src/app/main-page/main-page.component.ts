@@ -11,8 +11,7 @@ import * as $ from 'jquery'; //importing jquery
 })
 export class MainPageComponent implements OnInit {
 
-  devices$: Object;
-  // filter: Data;
+  devices$: any  = [];
   onManufacturer: any = [];
   orderByPriceLowToHigh: any = [];
   orderByPriceHighToLow: any =  [];
@@ -20,10 +19,11 @@ export class MainPageComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    // this.filter = new Data;
-    this.data.getDevices().subscribe(
-      data => this.devices$ = data
-    );
+    //call getDevices function to retrieve to data and store on array devices$
+    this.data.getDevices().subscribe((response) => {
+      this.devices$ = response
+      console.log(this.devices$)
+    })
   }
   //return selected manufacturer
   onManufacturerSelect(val){

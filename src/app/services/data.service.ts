@@ -12,9 +12,9 @@ export class DataService {
     return this.http.get('./src/data/feed.json')
   }
 
-  getDevice(userId) {
-    return this.http.get('./src/data/feed.json/'+userId)
-  }
+  // getDevice(userId) {
+  //   return this.http.get('./src/data/feed.json/'+userId)
+  // }
 
 }
 
