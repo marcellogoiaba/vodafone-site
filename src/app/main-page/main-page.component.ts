@@ -29,6 +29,15 @@ export class MainPageComponent implements OnInit {
         this.onManufacturer$.push(this.devices$[i].manufacturer)
       }
     })
+    
+  }
+
+  highToLow(){
+    let newArray : any = [];
+    this.devices$.sort((a, b) => {
+      return (a.priceFrom > b.priceFrom) ? 1 : ((b.priceFrom > a.priceFrom) ? -1 : 0);
+       console.log(this.devices$);
+    })
   }
  
   

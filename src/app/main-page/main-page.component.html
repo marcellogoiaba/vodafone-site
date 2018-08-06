@@ -30,7 +30,7 @@
               <label for="">Sort by price</label>
               <select class="form-control" name="filterbyprice" id="filterbyprice" >
                 <option [ngValue]="lowToHigh">Low to high</option>
-                <option [ngValue]="highToLow">High to low</option>
+                <option (change)="highToLow()" [ngValue]="highToLow">High to low</option>
               </select>
             </div>
             <div class="col-sm-6">

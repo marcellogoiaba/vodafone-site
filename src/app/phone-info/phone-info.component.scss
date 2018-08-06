@@ -63,16 +63,16 @@ section h1{
 }
 .device-info{
     border-left: 1px solid $borders;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
     li{
         list-style: circle;
     }
     p{
-        padding: 20px;
+        padding: 0 20px 20px 20px;
     }
 }
 .buy-now {
-    margin: 30px 0 0 20px;
+    margin: 10px 0 0 20px;
     padding: 6px 25px;
     font-size: 24px;
     text-align: center;
@@ -84,13 +84,31 @@ section h1{
     border-radius: 7px;
     transition: ease all .4s;
   }
-  
+  .buy-now:disabled{background: $main-colour !important; cursor: not-allowed}
   .buy-now:hover {background: linear-gradient($main-colour, $main-colour-darker)}
   
   .buy-now:active {
       transition: ease all .4s;
     background: $main-colour-darker;
     // transform: translateY(1px);
+  }
+  .phone-price{
+     color: $main-colour;
+     padding-left: 20px;
+     h3{
+         font-size: 2em;
+     }
+  }
+  .danger{
+      color: $main-colour;
+      img{
+          height: 18px;
+          margin-top: -5px
+      }
+  }
+  .isAvailable{
+    line-height: 10px;
+    margin-bottom:  -5px;
   }
 
   /////////////////////Media queries/////////////////////
