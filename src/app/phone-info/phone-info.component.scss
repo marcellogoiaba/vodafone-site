@@ -71,7 +71,7 @@ section h1{
         list-style: circle;
     }
     p{
-        padding: 0 20px 20px 20px;
+        padding: 14px 20px 20px 20px;
     }
 }
 .buy-now {
@@ -115,18 +115,24 @@ section h1{
   }
 
   /////////////////////Media queries/////////////////////
-  @media only screen and ( max-width: 767px ){
-    .device-info{
-        border-left: none;
-        border-top: 1px solid $borders;
-        padding: 5px;
-        margin-bottom: 30px;
-    }
-    .photo-gallery{
-        margin-bottom: 34px;
-    }
-  }
-  @media only screen and ( max-width: 340px ){
+@media only screen and ( max-width: 767px ){
+.device-info{
+    border-left: none;
+    border-top: 1px solid $borders;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+.photo-gallery{
+    margin-bottom: 34px;
+}
+}
+@media only screen and ( max-width: 340px ){
     section h1{ font-size: 1.6em}
-  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    .device-photo{
+        height: calc(100vh - 683px) ;
+    }
+}
+
   
