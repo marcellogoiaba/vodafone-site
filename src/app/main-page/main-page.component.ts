@@ -28,7 +28,34 @@ export class MainPageComponent implements OnInit {
       for(let i in this.devices$){
         this.onManufacturer$.push(this.devices$[i].manufacturer)
       }
+      this.PriceAscending(response);
+      this.PriceDescending(response);
     });
+  }
+  sortByPrice($event){
+    console.log("it works :-)", $event);
+    
+  }
+
+
+  //order array by price Ascending and descending and store new variables
+  PriceDescending(response){
+    this.orderByPriceLowToHigh = response.sort((a, b) => {
+      if(a.priceFrom < b.priceFrom) return 1;
+      if(a.priceFrom > b.priceFrom) return -1;
+      return 0;
+    })
+    this.orderByPriceHighToLow = response;
+  }
+  PriceAscending(response){
+    this.orderByPriceLowToHigh = response.sort((a, b) => {
+      if(a.priceFrom < b.priceFrom) return -1;
+        if(a.priceFrom > b.priceFrom) return 1;
+        return 0;
+      })
+    this.orderByPriceLowToHigh = response;
+    console.log(this.orderByPriceLowToHigh);
+    
   }
  
   

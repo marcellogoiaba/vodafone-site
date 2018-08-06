@@ -27,17 +27,17 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <label for="">Sort by price</label>
-              <select class="form-control" name="filterbyprice" id="filterbyprice" >
-                <option [ngValue]="lowToHigh">Low to high</option>
-                <option (change)="highToLow()" [ngValue]="highToLow">High to low</option>
-              </select>
-            </div>
-            <div class="col-sm-6">
               <label for="">Select manufacturer</label>
               <select class="form-control" name="filterbymanufacturer" id="filterbymanufacturer" [(ngModel)]="manufacturer" >
                 <option selected value="">Show all devices</option>
                 <option *ngFor="let x of onManufacturer$ | uniqueFilter" [ngValue]="x" >{{x}}</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label for="">Sort by price</label>
+              <select class="form-control" disabled name="filterbyprice" (chage)="sortByPrice($event)" id="filterbyprice" >
+                <option [ngValue]="highToLow">High to low</option>
+                <option [ngValue]="lowToHigh">Low to high</option>
               </select>
             </div>
           </div>
@@ -45,7 +45,7 @@
       </div>
     </div>
   <div class="container">
-    <div class="row app-catalog" >
+    <div class="row app-catalog">
       <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let device of devices$ | byManufacturer:manufacturer">
         <!-- click on the  phone-card div, routes you to phone-info view  -->
         <div class="phone-card" routerLink="/details/{{device.id}}"> 
