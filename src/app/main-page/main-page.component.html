@@ -35,10 +35,9 @@
             </div>
             <div class="col-sm-6">
               <label for="">Select manufacturer</label>
-              <!-- [(ngModel)]="filter.byManufacturer" (change)="onManufacturerSelect(filter.byManufacturer) -->
               <select class="form-control" name="filterbymanufacturer" id="filterbymanufacturer" [(ngModel)]="manufacturer" >
                 <option selected value="">Show all devices</option>
-                <option *ngFor="let x of devices$" [ngValue]="x.manufacturer" >{{x.manufacturer}}</option>
+                <option *ngFor="let x of onManufacturer$ | uniqueFilter" [ngValue]="x" >{{x}}</option>
               </select>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'; //the data sevice that parses the data from the feed.json
 import { Observable } from 'rxjs'; //holds the data that comes from the api 
 import { ByManufacturerPipe } from '../filters/by-manufacturer.pipe';
+import { UniquePipe } from '../filters/uniqueFilter';
 import * as $ from 'jquery'; //importing jquery 
 
 @Component({
@@ -12,7 +13,7 @@ import * as $ from 'jquery'; //importing jquery
 export class MainPageComponent implements OnInit {
 
   devices$: any  = [];
-  onManufacturer: any = [];
+  onManufacturer$: any = [];
   orderByPriceLowToHigh: any = [];
   orderByPriceHighToLow: any =  [];
   
@@ -21,15 +22,15 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
     //call getDevices function to retrieve to data and store on array devices$
     this.data.getDevices().subscribe((response) => {
-      this.devices$ = response
-      console.log(this.devices$)
+      this.devices$ = response;
+
+      //add manufactureres into onManufacturer$ array for filter dropdown
+      for(let i in this.devices$){
+        this.onManufacturer$.push(this.devices$[i].manufacturer)
+      }
     })
   }
-  //return selected manufacturer
-  onManufacturerSelect(val){
-     this.devices$ = this.data.getDevices = val;
-
-  }
+ 
   
   //these two functions are for scrolling animation 
   scrollToHomePage(){

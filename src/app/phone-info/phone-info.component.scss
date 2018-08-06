@@ -1,5 +1,6 @@
 
 @import "../../styles/colours";
+@import "../../styles/mixins";
 
 .phone-detail h1{
     padding-top: 30px;
@@ -52,6 +53,12 @@ section h1{
         margin: 5px;
         padding: 5px;
         border-radius: 7px;
+        transition: ease all .4s;
+    }
+    img:hover{
+        cursor: pointer;
+        border: 1px solid $main-colour;
+        @include addShadow;
     }
 }
 .device-info{

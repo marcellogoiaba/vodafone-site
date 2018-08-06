@@ -8,13 +8,15 @@ import { PhoneInfoComponent } from './phone-info/phone-info.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ByManufacturerPipe } from './filters/by-manufacturer.pipe';
+import { UniquePipe } from './filters/uniqueFilter'
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     PhoneInfoComponent,
-    ByManufacturerPipe
+    ByManufacturerPipe,
+    UniquePipe
   ],
   imports: [
     BrowserModule,
