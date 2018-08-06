@@ -71,9 +71,14 @@ section h1{
 }
 .navbar-menu > li > a:hover{
     text-decoration: none;
-    color: $main-colour;
-    border-bottom: 5px solid $main-colour;
+    color: $text-colour;
+    border-bottom: 5px solid $text-colour;
 }
+.app-navbar-active{
+    color: $main-colour !important;
+    border-bottom: 5px solid $main-colour !important;
+}
+
 
 
 ///////////////////Home Page section/////////////////////////////

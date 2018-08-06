@@ -2,6 +2,7 @@ import { Component, OnInit, Sanitizer } from '@angular/core';
 import { DataService } from '../services/data.service'; //the data sevice that parses the data from the feed.json
 import { Observable } from 'rxjs'; //holds the data that comes from the api 
 import { ActivatedRoute } from '@angular/router';
+import * as $ from 'jquery'; //importing jquery 
 
 @Component({
   selector: 'app-phone-info',
@@ -51,14 +52,21 @@ export class PhoneInfoComponent implements OnInit {
       }
     })
   }
+
+  //change images for the image gallery, add/remove active class
   imageBack(){
     this.imageSelected$ = this.device$.imageBack;
+    $('.photo-gallery > img').removeClass('active')
+    $('#imageBack').addClass('active');
   }
   imageFront(){
     this.imageSelected$ = this.device$.imageFront;
+    $('.photo-gallery > img').removeClass('active')
+    $('#imageFront').addClass('active');
   }
   imageDetails(){
     this.imageSelected$ = this.device$.imageDetails;
+    $('.photo-gallery > img').removeClass('active')
+    $('#imageDetails').addClass('active');
   }
-
 }

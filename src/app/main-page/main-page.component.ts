@@ -28,28 +28,25 @@ export class MainPageComponent implements OnInit {
       for(let i in this.devices$){
         this.onManufacturer$.push(this.devices$[i].manufacturer)
       }
-    })
-    
-  }
-
-  highToLow(){
-    let newArray : any = [];
-    this.devices$.sort((a, b) => {
-      return (a.priceFrom > b.priceFrom) ? 1 : ((b.priceFrom > a.priceFrom) ? -1 : 0);
-       console.log(this.devices$);
-    })
+    });
   }
  
   
-  //these two functions are for scrolling animation 
+  //these two functions are for scrolling animation. Add/remove active class 
   scrollToHomePage(){
     $('html, body').animate({scrollTop: $('.home-page-section').offset().top}, 1000);
+    $('.navbar-menu > li > a').removeClass('app-navbar-active');
+    $('#menuHome').addClass('app-navbar-active');
   }
   scrollToStore(){
     $('html, body').animate({scrollTop: $('.store-section').offset().top}, 1000);
+    $('.navbar-menu > li > a').removeClass('app-navbar-active');
+    $('#menuStore').addClass('app-navbar-active');
   }
   scrollToContacts(){
     $('html, body').animate({scrollTop: $('.contacts-section').offset().top}, 1000);
+    $('.navbar-menu > li > a').removeClass('app-navbar-active');
+    $('#menuContact').addClass('app-navbar-active');
   }
   
 

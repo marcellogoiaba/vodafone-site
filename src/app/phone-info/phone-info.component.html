@@ -11,9 +11,9 @@
               <img src="{{imageSelected$}}" alt="">
           </div>
           <div class="photo-gallery clearfix">
-            <img (click)="imageFront() "*ngIf="device$.imageFront" src="{{device$.imageFront}}" alt="">
-            <img (click)="imageBack()" *ngIf="device$.imageBack" src="{{device$.imageBack}}" alt="">
-            <img (click)="imageDetails()" *ngIf="device$.imageDetails" src="{{device$.imageDetails}}" alt="">
+            <img (click)="imageFront()" class="active" *ngIf="device$.imageFront" src="{{device$.imageFront}}" id="imageFront" alt="">
+            <img (click)="imageBack()" *ngIf="device$.imageBack" src="{{device$.imageBack}}" id="imageBack" alt="">
+            <img (click)="imageDetails()" *ngIf="device$.imageDetails" src="{{device$.imageDetails}}" id="imageDetails" alt="">
           </div>
         </div>
         <div class="col-md-7 device-info">
