@@ -36,10 +36,10 @@ export class MainPageComponent implements OnInit {
   sortByPrice(val){
     // console.log("low to high", this.orderByPriceHighToLow);
     if(val === "Low to high"){
-      
+      console.log("LowToHigh", this.orderByPriceLowToHigh);
     }
     else{
-      
+      console.log("HighToLow", this.orderByPriceHighToLow);
     }
   }
 
@@ -47,14 +47,18 @@ export class MainPageComponent implements OnInit {
   //order array by price Ascending and descending and store new variables
   PriceDescending(response){
     this.orderByPriceHighToLow = response.sort((a, b) => {
-      if(a.priceFrom < b.priceFrom) return -1;
-      if(a.priceFrom > b.priceFrom) return 1;
+      if(a.priceFrom < b.priceFrom) return 1;
+      if(a.priceFrom > b.priceFrom) return -1;
       return 0;
     })
     // console.log("high to low", this.orderByPriceHighToLow);
   }
   PriceAscending(){
-    this.orderByPriceLowToHigh = this.orderByPriceHighToLow.reverse();
+    
+    // this.orderByPriceLowToHigh = this.orderByPriceHighToLow.reverse();
+    // console.log("high to low", this.orderByPriceHighToLow);
+    // //reversing array not working
+    // console.log("initially value", this.orderByPriceLowToHigh);
   }
  
   
