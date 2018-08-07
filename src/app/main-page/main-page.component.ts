@@ -29,16 +29,18 @@ export class MainPageComponent implements OnInit {
         this.onManufacturer$.push(this.devices$[i].manufacturer)
       }
       this.PriceDescending(response);
-      this.PriceAscending();
     });
   }
 
   sortByPrice(val){
-    // console.log("low to high", this.orderByPriceHighToLow);
     if(val === "Low to high"){
+      this.PriceAscending();
+      this.devices$ = this.orderByPriceLowToHigh;
       console.log("LowToHigh", this.orderByPriceLowToHigh);
     }
     else{
+      this.PriceDescending(this.devices$);
+      this.devices$ = this.orderByPriceHighToLow;
       console.log("HighToLow", this.orderByPriceHighToLow);
     }
   }
@@ -54,11 +56,9 @@ export class MainPageComponent implements OnInit {
     // console.log("high to low", this.orderByPriceHighToLow);
   }
   PriceAscending(){
+    this.orderByPriceLowToHigh = this.orderByPriceHighToLow.reverse();
     
-    // this.orderByPriceLowToHigh = this.orderByPriceHighToLow.reverse();
-    // console.log("high to low", this.orderByPriceHighToLow);
-    // //reversing array not working
-    // console.log("initially value", this.orderByPriceLowToHigh);
+    console.log("initially value", this.orderByPriceLowToHigh);
   }
  
   
