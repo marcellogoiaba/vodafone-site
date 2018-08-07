@@ -8,7 +8,8 @@ import { PhoneInfoComponent } from './phone-info/phone-info.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ByManufacturerPipe } from './filters/by-manufacturer.pipe';
-import { UniquePipe } from './filters/uniqueFilter'
+import { UniquePipe } from './filters/uniqueFilter';
+import { OrderPlacedComponent } from './order-placed/order-placed.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UniquePipe } from './filters/uniqueFilter'
     MainPageComponent,
     PhoneInfoComponent,
     ByManufacturerPipe,
-    UniquePipe
+    UniquePipe,
+    OrderPlacedComponent
   ],
   imports: [
     BrowserModule,
