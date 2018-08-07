@@ -3,17 +3,17 @@
   
   <div class="container">
       <div class="back-button">
-        <a routerLink=""><img src="../../assets/icons/arrow_back.svg"  alt=""> Back</a>
+        <a routerLink=""><img src="../../assets/icons/arrow_back.svg"  alt="back icon"> Back</a>
       </div>
       <div class="row">
         <div class="col-md-5">
           <div class="device-photo">
-              <img src="{{imageSelected$}}" alt="">
+              <img src="{{imageSelected$}}" alt="phone image">
           </div>
           <div class="photo-gallery clearfix">
-            <img (click)="imageFront()" class="active" *ngIf="device$.imageFront" src="{{device$.imageFront}}" id="imageFront" alt="">
-            <img (click)="imageBack()" *ngIf="device$.imageBack" src="{{device$.imageBack}}" id="imageBack" alt="">
-            <img (click)="imageDetails()" *ngIf="device$.imageDetails" src="{{device$.imageDetails}}" id="imageDetails" alt="">
+            <img (click)="imageFront()" class="active" *ngIf="device$.imageFront" src="{{device$.imageFront}}" id="imageFront" alt="phone image imageFront">
+            <img (click)="imageBack()" *ngIf="device$.imageBack" src="{{device$.imageBack}}" id="imageBack" alt="phone image back">
+            <img (click)="imageDetails()" *ngIf="device$.imageDetails" src="{{device$.imageDetails}}" id="imageDetails" alt="phone image details">
           </div>
         </div>
         <div class="col-md-7 device-info">
@@ -27,7 +27,7 @@
               <!-- <li *ngFor="let x of device$ "><strong>Colours: <span></span></strong> Rose Gold, Space Grey </li> -->
             </ul>
             <p class="isAvailable" *ngIf="inStock$">Device available</p>
-            <p class="isAvailable danger" *ngIf="!inStock$"> <img src="../../assets/icons/alert.svg" alt=""> Currently out of stock</p>
+            <p class="isAvailable danger" *ngIf="!inStock$"> <img src="../../assets/icons/alert.svg" alt="alert"> Currently out of stock</p>
             <div class="phone-price">
               from<h3>€{{device$.priceFrom}}</h3>
             </div>

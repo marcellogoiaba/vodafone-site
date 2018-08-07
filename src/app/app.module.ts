@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ByManufacturerPipe } from './filters/by-manufacturer.pipe';
 import { UniquePipe } from './filters/uniqueFilter';
-import { OrderPlacedComponent } from './order-placed/order-placed.component'
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { OrderPlacedComponent } from './order-placed/order-placed.component'
     MainPageComponent,
     PhoneInfoComponent,
     ByManufacturerPipe,
-    UniquePipe,
-    OrderPlacedComponent
+    UniquePipe
   ],
   imports: [
     BrowserModule,
